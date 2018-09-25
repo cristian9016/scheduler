@@ -13,11 +13,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {
 
     val dis = LifeDisposable(this)
-    val viewModel:LoginViewModel by lazy { buildViewModel<LoginViewModel>() }
+    val viewModel:LoginViewModel by viewModel()
     val dialog : ProgressDialog by lazy { indeterminateProgressDialog ( "PorFavor Espere, Iniciando Sesión","") }
 
     override fun onCreate(savedInstanceState: Bundle?) {

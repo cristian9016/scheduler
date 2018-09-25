@@ -10,5 +10,4 @@ import retrofit2.http.POST
 interface LoginApi {
     @POST("v2/api/login_charac")
     fun login(@Body login: Login):Observable<ServerResponse<String>>
-
 }
